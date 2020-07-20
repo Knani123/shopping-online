@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+  <script src="https://unpkg.com/kursor"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+      .card>img{
+          width: 160px;
+          height: 180px;
+          transition:2s transform;
+      }
+      .card-body>button{
+         cursor:grab;
+      }
+      .card:hover{
+          transform:scale(1.1);
+      }
+      h2{
+         font-style: italic;
+      }
+      header>nav{
+      	        background-image:url('https://redfoxvintage.com/wp-content/uploads/2018/01/Fashion-Boutiques-Tips.jpg');
+                background-position: center;
+                background-size: cover;
+                height: 150px;
+      }
+      aside>.div1{width:200px; position:fixed; left:85%;top:150px}
+      aside>.div2{width:200px; position:fixed; left:85%;top:550px ;color:green}
+
+      .carte{
+      	background-color: rgba(255,255,0,0.8);
+      	max-height: 370px;
+      	overflow: auto;
+
+      }
+ 
+      .header{
+      	display: flex;
+      	justify-content: center;
+
+      }
+      .header>span{
+      	margin-top: 10px;
+      	transform:scale(1.5);
+      	color: black;
+      }
+      tr>.fas{
+      	 margin-top: 23px;
+      }
+      td{
+       	padding: 5px;
+      }
+      .nombre{
+      	max-width: 50px;
+      	display: inline;
+      }
+      #cursor{
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border:2px solid black;
+          box-sizing: border-box;
+          transform: translate(-50%,-50%);
+          border-radius: 50%;
+      }
+      @media  (max-width: 1150px)and (min-width:993px){
+           aside>.div1{
+              width:200px;
+               position:fixed;
+                left:50%;
+                transform: translateX(-50%);
+                top:250px;
+                }
+                aside>.div2{
+              width:200px;
+               position:fixed;
+                left:50%;
+                transform: translateX(-50%);
+                top:550px;
+                }
+                .carte{
+                 max-height: 230px;
+ 
+                    }
+      }
+      @media  (max-width: 992px){
+        aside>.div1{
+              width:200px;
+               position: static;;
+                left:50%;
+                margin-left:50% ;
+                margin-bottom:50px ;
+                transform: translateX(-50%);
+                overflow: auto;
+
+                 }
+                 aside>.div2{
+              width:200px;
+               position: static;;
+                left:50%;
+                margin-left:50% ;
+                 transform: translateX(-50%);
+                overflow: auto;
+                 }
+                 .carte{
+                 max-height: 270px;
+                    }
+               
+                    .lis{
+                      display: none;
+                    }
+                    .hd{
+                      height: 40px;
+                      padding: 0;
+                    }
+                    .rech{
+                      margin-top: 30px;
+                      width: 150px;
+                      left: 30px;
+                    }
+                    .lis1{
+                      padding: 10px;
+                    }
+      }
+      nav{
+        position: relative;
+      }
+      .rech{
+        position:absolute;
+        display: flex;
+        width: 300px;
+        margin-left: 50%;
+        transform: translate(-60%);
+      }
+
+  </style>
+</head>
+<body >
+<div class="container ">
+	<header>
+		<nav class="navbar bg-danger" >
+            
+     <div class="btn img-rounded   alert-success hd" >
+             <span ><a class="navbar-brand lis1"  href="index.html">Shop</a></span>
+      </div>
+           <div class="rech">
+            <input class="form-control center-block " type="text" placeholder="Search" aria-label="Search">
+            <button><i class="fas fa-search fa-x"></i></button>
+          </div>
+           <ul class="nav navbar-nav navbar-right center-block text-center lis">
+             <li class="img-rounded bg-warning  "style="margin:5px;"><a href="#">Page 1</a></li>
+             <li class="img-rounded bg-warning  " style="margin:5px;"><a href="#">Page 2</a></li>
+           </ul>
+       
+    </nav>
+</div>
+  </header>
+<main>
+	
+<div class="container " style="margin: auto 5% auto 5% ;">
+        <h2 class="text-center">keep calm and do shopping<span>&nbsp;<img src="res/acha.png" class="img img-circle" alt="image" width="60px"></span></h2>
+        <div class="row" >
+            <div class="jumbotron col-lg-10 col-lg-offset-1">
+                <div>
+                    <div class="row text-center">
+                        <div class="col-lg-3 col-md-6 col-sm-12 bg-success">
+                            <div class="card center-block" style="width: 18rem;">
+                                <img src="res/piece1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body"  id="1">
+                                  <h5 class="card-title">Mantel</h5>
+                                  <p class="card-text">100 <span>&#128;</span></p>
+                                  <button class="get btn btn-success get" >get it</button>
+                                </div>
+                              </div><hr>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 bg-danger">                       
+                         <div class="card center-block" style="width: 18rem;"  >
+                                <img src="res/piece2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body" id="2">
+                                  <h5 class="card-title">Floral shirt</h5>
+                                  <p class="card-text">90 <span>&#128;</span></p>
+                                  <button class="get btn btn-success get"  >get it</button>
+                                </div>
+                              </div><hr></div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 bg-info">                        
+                        	<div class="card center-block" style="width: 18rem;"  >
+                                <img src="res/piece3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body" id="3">
+                                  <h5 class="card-title">Red short</h5>
+                                  <p class="card-text">55 <span>&#128;</span></p>
+                                  <button class="get btn btn-success get"  >get it</button>
+                                </div>
+                              </div><hr></div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 bg-warning">                       
+                         <div class="card center-block" style="width: 18rem;"  >
+                                <img src="res/piece4.jpg" class="card-img-top" alt="...">
+                                <div class="card-body" id="4">
+                                  <h5 class="card-title">Casquette dsquared</h5>
+                                  <p class="card-text">25 <span>&#128;</span></p>
+                                  <button class="get btn btn-success get"  >get it</button>
+                                </div>
+                              </div><hr></div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-lg-3 col-md-6 col-sm-12 bg-warning">                        
+                        	<div class="card center-block" style="width: 18rem;"  >
+                                <img src="res/piece5.jpg" class="card-img-top" alt="...">
+                                <div class="card-body" id="5">
+                                  <h5 class="card-title">Casquette Save the Natives</h5>
+                                  <p class="card-text">20 <span>&#128;</span></p>
+                                  <button class="get btn btn-success get" >get it</button>
+                                </div>
+                              </div><hr></div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 bg-info">                       
+                         <div class="card center-block" style="width: 18rem;"  >
+                                <img src="res/piece6.jpg" class="card-img-top" alt="...">
+                                <div class="card-body" id="6">
+                                  <h5 class="card-title">white fur hood</h5>
+                                  <p class="card-text">125 <span>&#128;</span></p>
+                                  <button class="get btn btn-success get" >get it</button>
+                                </div>
+                              </div><hr></div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 bg-success">                        
+                        	<div class="card center-block" style="width: 18rem;" >
+                                <img src="res/piece7.jpg" class="card-img-top" alt="...">
+                                <div class="card-body" id="7">
+                                  <h5 class="card-title">Hooded jacket</h5>
+                                  <p class="card-text">80 <span>&#128;</span></p>
+                                  <button class="get btn btn-success get"  >get it</button>
+                                </div>
+                              </div><hr></div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 bg-danger">                        
+                        	<div class="card center-block" style="width: 18rem;"  >
+                                <img src="res/piece8.jpg" class="card-img-top" alt="...">
+                                <div class="card-body" id="8">
+                                  <h5 class="card-title">Sweat capuche Nike </h5>
+                                  <p class="card-text">95 <span>&#128;</span></p>
+                                  <button class="get btn btn-success get"  >get it</button>
+                                </div>
+                              </div><hr></div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+</div>
+
+	<aside>
+		<div class="div1 carte boder-rounded">
+		 <div class="header">
+       <h4>Your goods</h4><span>&nbsp;&nbsp;&nbsp;<i class="fas fa-shopping-basket"></i></span>
+      </div>
+      <table>
+      </table>
+    </div>
+    <div class="div2 carte boder-rounded">
+      <div class="header forTotal">
+        <h4>Total:<span id="total" style="color: blueviolet;"></span>&#128;</h4><span>&nbsp;&nbsp;&nbsp;<i class="fas fa-money-check-alt"></i></span>
+       </div>
+       <table>
+       </table>
+     </div>
+	</aside> 
+</main>
+  <script type="text/javascript">
+
+  let direct=(function(){
+  var bts=document.querySelectorAll(".get");
+for(x of bts){
+    x.addEventListener("click",dis);
+function dis(e){
+   var src=this.parentNode.parentNode.firstElementChild.src;
+   console.log(this.parentNode.parentNode.id)
+   var prix=Number(this.parentNode.childNodes[3].textContent.split(" ")[0]);
+   var titre=this.parentNode.childNodes[1].textContent;
+   console.log(src,prix)
+   var x = document.createElement("INPUT");
+		x.setAttribute("type", "number");
+		x.setAttribute("class", "nombre");
+		x.setAttribute("min", "0");
+    x.setAttribute("max", "100");
+    x.setAttribute("placeholder", "put");
+   x.setAttribute("value", 1);
+
+ 
+
+    
+
+    this.disabled=true;
+    this.title="You got it already";
+    this.style.backgroundColor="yellow";
+    this.style.color="rgba(0,0,0,1)";
+
+    this.innerHTML='<i class="far fa-thumbs-up"></i>';
+    this.value="got";
+var img=document.createElement("img");
+img.setAttribute("src",src);
+img.setAttribute("class","img img-circle");
+img.setAttribute("width","50px");
+img.setAttribute("title",titre);
+var eleTdImg=document.createElement("td");
+eleTdImg.appendChild(img);
+var eleTdNb=document.createElement("td");
+eleTdNb.appendChild(x);
+var eleTdPrix=document.createElement("td");
+eleTdPrix.setAttribute("class","prix");
+
+
+eleTdPrix.innerHTML=prix*(x.value)+" "+"&#128;";
+
+var eleTr=document.createElement("tr");
+var d=this.parentNode.id
+eleTr.className=d;
+eleTr.appendChild(eleTdImg);
+eleTr.appendChild(eleTdNb);
+eleTr.appendChild(eleTdPrix);
+
+var poub=document.createElement("span");
+poub.innerHTML+='<i class="fas fa-trash-alt" style="color:red; cursor:pointer"></i>';
+poub.setAttribute("name",d)
+poub.onclick=rem;
+
+var totale=document.getElementById("total");
+
+x.onchange=chan;
+
+    function chan(){
+      b=x.value;
+      x.setAttribute("value", b);
+      eleTdPrix.innerHTML=prix*(x.value)+" "+"&#128;";
+      totale.innerHTML=Number(totale.innerHTML)+prix*(x.value)
+
+  }
+  
+function rem(){
+  var ddd=poub.getAttribute("name")
+  var btRe=document.getElementById(ddd).childNodes[5];
+      btRe.innerHTML="get it"
+      btRe.style.backgroundColor="";
+      btRe.style.color="";
+      btRe.disabled=false;
+  totale.innerHTML=Number(totale.innerHTML)-prix*(x.value);
+  poub.parentElement.remove();
+};
+
+eleTr.appendChild(poub);
+console.log(eleTr)
+document.querySelector("table").appendChild(eleTr);
+}
+}
+//Calculer la totale de prix !
+var bts=document.querySelectorAll(".get");
+
+for(var i=0;i<bts.length;i++){
+    bts[i].addEventListener("click",dis);
+function dis(e){
+ var tg=[];
+var totale=document.getElementById("total");
+var pr=document.querySelectorAll(".prix");
+var reducer=(a,b)=>(a+b);
+for(x of pr){
+    tg.push(Number(x.textContent.split(" ")[0]));
+}
+     totale.innerHTML=tg.reduce(reducer);
+
+}
+}
+
+new kursor(
+    {    
+         type:1,
+         color:'rgba(100,100,255)'
+     }
+)
+})();
+</script>
+</body>
+</html>
